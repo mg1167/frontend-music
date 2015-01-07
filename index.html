@@ -1,60 +1,73 @@
-<!DOCTYPE HTML SYSTEM>
+<DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1>
-		<title>Proyecto</title>
-		<link rel="stylesheet" href="css/boot/bootstrap.css"  type="text/css"/>
-		<link rel="stylesheet" href="css/boot/bootstrap-responsive.css"  type="text/css"/>
-		<link rel="stylesheet" href="css/boot/bootstrap.min.css"  type="text/css"/>
-		<link rel="stylesheet" href="css/boot/bootstrap-responsive.min.css"  type="text/css"/>
-		<link rel='stylesheet' href='css/styles.css' type='text/css'>
+		<link rel="icon" href="http://cdn.flaticon.com/png/256/26810.png">
+		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<title> Frontend-Music ♪ </title>
+		<div class="row">
+        <div class="col-md-12">
+            <div class="recuadro-botones" id= "bot">
+                <div class ="col-md-2"></div>
+                <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+                <button type="button" class="btn botones" id ="duracion">Duration</button>
+                <button type="button" class="btn botones" id = "topa">Top a-z</button>
+                <button type="button" class="btn botones" id = "topz">Top z-a</button>
+                <button type="button" class="btn botones" id ="top">Top Today</button>
+                <button type="button" class="btn botones" id="repro">Playcounts</button>
+
+                <i class="icon-search"></i>
+            </div>
+        </div>
+    </div>
+	
 	</head>
 	<body>
-		<div class = "container">
-			<div class = "row">
-				<div class = "span12">
-					<div class = "Top">
-						<div class = "row">
-							<div class = "span12">
-								<h1 class = "Title row" style="font-family:Broadway"> Top Music List  by Ludwin Garcia </h1>
-							</div>
-							<div class = "span12">
-								<div class="navbar navbar-inverse">
-					              <div class="navbar-inner">
-					                <div class="container">
-					                  <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-					                    <span class="icon-bar"></span>
-					                    <span class="icon-bar"></span>
-					                    <span class="icon-bar"></span>
-					                  </a>
-					                  <li class="brand DelFilters">Select Filter</li>
-					                  <div class="nav-collapse navbar-responsive-collapse collapse" style="height: 0px;">
-					                    <ul class="nav">
-					                      <li class="brand az">Order by A - Z</li>
-					                      <li class="brand za">Order by Z - A</li>
-					                      <li class="brand durationAscen">Duration Upward</li>
-					                      <li class="brand durationDescen">Duration Falling</li>
-					                      <li class="brand playCountAscen">Playcount Falling</li>
-					                      <li class="brand playCountDescen">Playcount Falling</li>
-					                    </ul>
-					                  </div><!-- /.nav-collapse -->
-					                </div>
-					              </div><!-- /navbar-inner -->
-					            </div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class = "row">
-				<div class= "TopList"></div>
-			</div>
-		</div>
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="js/boot/bootstrap.js"></script>
-	<script src="js/boot/bootstrap.min.js"></script>
-	<script type='text/javascript' src='js/script.js'></script>
-	</body>
 
-</html>
+
+	<div class= "container">
+		<div class="row" id="barra">
+			<div class="col-md-2">Artist</div>
+			<div class="col-md-2">Song</div>
+			<div class="col-md-2">Listeners</div>
+			<div class="col-md-2">Duration</div>
+			<div class="col-md-2">Reproductions</div>
+			<div class="col-md-2">Picture</div>
+		</div>
+		<br/>
+		<br/>	
+		
+			<div class="results"></div>
+		
+			<body>
+			<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+			<script src= "bower_components/jquery/dist/jquery.js"></script>
+			<script src="js/script.js"></script>
+			<script src="js/bootstrap.js"></script>
+
+
+
+	</div>
+	</body>
+	</html>
+
+<!-- 9d566e78af070872cfff371252e2ead0 -->
+<!--http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=9d566e78af070872cfff371252e2ead0&format=json -->
+
+<!-- <tracks page="1" perPage="50" totalPages="20" total="1000">
+  <track>
+    <name>Dark Fantasy</name>
+    <playcount>124394</playcount>
+    <listeners>42141</listeners>
+    <mbid/>
+    <url>http://www.last.fm/music/Kanye+West/_/Dark+Fantasy</url>
+    <streamable fulltrack="0">0</streamable>
+    <artist>
+      <name>Kanye West</name>
+      <mbid>164f0d73-1234-4e2c-8743-d77bf2191051</mbid>
+      <url>http://www.last.fm/music/Kanye+West</url>
+    </artist>
+  </track>
+  ...
+</tracks> -->
